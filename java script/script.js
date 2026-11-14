@@ -1,3 +1,6 @@
+/*
+   1. SIMULATEUR FLUX TEMPOREL (Page Principale uniquement)
+ */
 const btnNexus = document.getElementById("btn-nexus");
 const btnPrune = document.getElementById("btn-prune");
 const badge = document.getElementById("status-badge");
@@ -7,55 +10,54 @@ const branchText = document.getElementById("branch-text");
 let nexusActive = false;
 let pruneReady = false;
 
-btnNexus.addEventListener("click", () => {
-  if (nexusActive === false) {
-    nexusActive = true;
-    pruneReady = false;
 
-    badge.textContent = "ALERTE NEXUS";
-    log.textContent = "> Anomalie détectée ! Branche divergente en cours...";
-    branchText.textContent = "/---";
+if (btnNexus && btnPrune && badge && log && branchText) {
+    btnNexus.addEventListener("click", () => {
+        if (nexusActive === false) {
+            nexusActive = true;
+            pruneReady = false;
 
-    setTimeout(() => {
-      branchText.textContent = "/-------";
-    }, 500);
+            badge.textContent = "ALERTE NEXUS";
+            log.textContent = "> Anomalie détectée ! Branche divergente en cours...";
+            branchText.textContent = "/---";
 
-    setTimeout(() => {
-      branchText.textContent = "/------------ [ALERTE LIGNE ROUGE]";
-      pruneReady = true;
-      log.textContent = "> Minuteurs en position. Prêt pour la réinitialisation.";
-    }, 1500);
-  }
-});
+            setTimeout(() => {
+                branchText.textContent = "/-------";
+            }, 500);
 
-btnPrune.addEventListener("click", () => {
-  if (pruneReady === true) {
-    pruneReady = false;
+            setTimeout(() => {
+                branchText.textContent = "/------------ [ALERTE LIGNE ROUGE]";
+                pruneReady = true;
+                log.textContent = "> Minuteurs en position. Prêt pour la réinitialisation.";
+            }, 1500);
+        }
+    });
 
-    badge.textContent = "BROUILLAGE...";
-    log.textContent = "> Charge activée. Effacement de la branche...";
-    branchText.textContent = "/------- [EFFACEMENT...]";
+    btnPrune.addEventListener("click", () => {
+        if (pruneReady === true) {
+            pruneReady = false;
 
-    setTimeout(() => {
-      branchText.textContent = "/---";
-    }, 600);
+            badge.textContent = "BROUILLAGE...";
+            log.textContent = "> Charge activée. Effacement de la branche...";
+            branchText.textContent = "/------- [EFFACEMENT...]";
 
-    setTimeout(() => {
-      branchText.textContent = "";
-      badge.textContent = "STABLE";
-      log.textContent = "> Chronologie Sacrée restaurée.";
-      nexusActive = false;
-    }, 1200);
-  }
-});
+            setTimeout(() => {
+                branchText.textContent = "/---";
+            }, 600);
+
+            setTimeout(() => {
+                branchText.textContent = "";
+                badge.textContent = "STABLE";
+                log.textContent = "> Chronologie Sacrée restaurée.";
+                nexusActive = false;
+            }, 1200);
+        }
+    });
+}
 
 /* 
-   carrousel
-*/
-
-/* =========================================================
-   CARROUSEL (Page d'Accueil)
-   ========================================================= */
+   2. CARROUSEL (Page d'Accueil uniquement)
+ */
 document.addEventListener("DOMContentLoaded", () => {
     try {
         const carousel = document.querySelector(".carousel");
