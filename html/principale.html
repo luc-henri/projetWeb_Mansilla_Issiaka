@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>TVA - Fonctionnement & But</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../java script/script.js" async></script>
 </head>
 <body>
 
@@ -13,7 +13,6 @@
     </header>
 
     <main>
-    
         <section id="but-sacre">
             <h2>Le But Sacré</h2>
             <p>
@@ -27,7 +26,7 @@
 
         <section id="workflow-reinitialisation">
             <h2>Le Processus de Réinitialisation (En 4 Étapes)</h2>
-            <ul style="list-style-type: circle;">
+            <ol type="1">
                 <li>
                     Détection : Identification immédiate d'un Événement Nexus par nos capteurs temporels avancés.
                 </li>
@@ -40,13 +39,35 @@
                 <li>
                     Brouillage (Pruning) : Activation des charges de réinitialisation pour désintégrer la branche temporelle corrompue et expédition du Variant dans le Néant (à la Fin des Temps).
                 </li>
-            </ul>
+            </ol>
         </section>
 
-        <section id="schema-interactif-container">
+      <section id="schema-interactif-container">
             <h2>Schéma d'une Ramification Temporelle</h2>
-            <div id="animation-chronologie">
-                <p></p>
+            <div id="animation-chronologie" class="tva-monitor">
+                <div class="monitor-header">
+                    <h3>Moniteur de la Chronologie Sacrée</h3>
+                    <p id="status-badge" class="badge stable">STABLE</p>
+                </div>
+
+                <div class="screen-container">
+                    <p class="redline-label">SEUIL CRITIQUE (LIGNE ROUGE)</p>
+                    <div class="redline"></div>
+
+                    <div id="nexus-branch" class="branch-box">
+                        <p id="branch-text"></p>
+                    </div>
+
+                    <div class="sacred-line"></div>
+                    <p class="sacred-label">CHRONOLOGIE SACRÉE</p>
+
+                    <p id="monitor-log">&gt; Flux temporel nominal.</p>
+                </div>
+
+                <div class="controls">
+                    <button type="button" id="btn-nexus" class="btn-danger">1. Simuler Événement Nexus</button>
+                    <button type="button" id="btn-prune" class="btn-action">2. Réinitialiser</button>
+                </div>
             </div>
         </section>
 
