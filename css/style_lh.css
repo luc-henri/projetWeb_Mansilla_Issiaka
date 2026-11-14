@@ -349,3 +349,123 @@ form textarea:focus {
 .hidden-message {
     display: none;
 }
+/* =========================================================
+   STYLE DU PIED DE PAGE (FOOTER) — CHARTE ANCIEN TVA
+   Compatible avec <footer> et <footer class="tva-footer">
+   ========================================================= */
+
+/* À conserver sur body pour plaquer le footer en bas d'écran
+   même sur les pages courtes (ex. apropos.html) */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer,
+.tva-footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #2b1d14;
+    color: #f4ebd9;
+    border-top: 6px solid #d96b27;
+    box-shadow: 0 -4px 0 #4a3222;
+    padding: 1.5rem 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.92rem;
+    text-align: center;
+}
+
+
+footer p,
+.tva-footer p {
+    max-width: 1100px;
+    margin: 0 auto 0.8rem auto;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color: #f4ebd9;
+}
+
+
+footer nav,
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed #e6a83a;
+}
+
+footer nav ul,
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+footer nav a,
+.footer-nav a {
+    display: inline-block;
+    color: #f2852e;
+    background-color: #4a3222;
+    border: 1px solid #d96b27;
+    padding: 0.4rem 0.9rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+footer nav a:hover,
+footer nav a:focus,
+.footer-nav a:hover,
+.footer-nav a:focus {
+    background-color: #d96b27;
+    color: #2b1d14;
+    transform: translateY(-2px);
+}
+
+
+.footer-motto {
+    display: block;
+    margin-top: 0.9rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #e6a83a;
+    letter-spacing: 1.5px;
+}
+
+
+@media screen and (max-width: 650px) {
+    footer,
+    .tva-footer {
+        padding: 1.2rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    footer nav,
+    .footer-nav,
+    footer nav ul,
+    .footer-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+    }
+
+    footer nav a,
+    .footer-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.6rem;
+    }
+}
