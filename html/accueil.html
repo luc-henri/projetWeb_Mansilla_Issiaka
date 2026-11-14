@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil TVA</title>
     <link rel="stylesheet" href="../css/style_lh.css">
+    <script src="../java script/script.js" defer></script>
 </head>
 <body>
 <header>
@@ -27,7 +28,31 @@
 <section class="hero">
     <h2>BIENVENUE AGENT</h2>
     <p>Bienvenue sur le portail central du Tribunal des Variations Anachroniques. Cet intranet constitue votre outil de contrôle prioritaire pour surveiller la stabilité de la Chronologie Sacrée, enregistrer les anomalies spatio-temporelles et coordonner les interventions des brigades face aux bifurcations non autorisées.</p>
-    <img src="../img/Code_Generated_Image.jpg" alt="Miss Minutes et le flux temporel">
+   <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide active">
+                    <img src="../img/Code_Generated_Image.jpg" alt="Miss Minutes et le flux temporel">
+                    <p class="carousel-caption">Archive 01 — Miss Minutes : Assistance administrative de la Chronologie Sacrée</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="../img/flux_temporel.jpg" alt="Schéma de l'Éternel Flux Temporel">
+                    <p class="carousel-caption">Archive 02 — Surveillance continue des dérivations de niveau Nexus</p>
+                </div>
+                <div class="carousel-slide">
+                    <img src="../img/brigade_minuteurs.jpg" alt="Intervention des Minuteurs du TVA">
+                    <p class="carousel-caption">Archive 03 — Déploiement des brigades via les Portes d'Uchronie</p>
+                </div>
+            </div>
+
+            <button type="button" class="carousel-btn" aria-label="Image précédente">&#10094;</button>
+            <button type="button" class="carousel-btn" aria-label="Image suivante">&#10095;</button>
+
+            <div class="carousel-indicators">
+                <button type="button" class="indicator active" aria-label="Afficher l'image 1"></button>
+                <button type="button" class="indicator" aria-label="Afficher l'image 2"></button>
+                <button type="button" class="indicator" aria-label="Afficher l'image 3"></button>
+            </div>
+        </div>
 </section>
 
 <section class="flux-status">
