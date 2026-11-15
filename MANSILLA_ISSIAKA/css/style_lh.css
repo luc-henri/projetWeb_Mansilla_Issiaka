@@ -349,13 +349,7 @@ form textarea:focus {
 .hidden-message {
     display: none;
 }
-/* =========================================================
-   STYLE DU PIED DE PAGE (FOOTER) — CHARTE ANCIEN TVA
-   Compatible avec <footer> et <footer class="tva-footer">
-   ========================================================= */
 
-/* À conserver sur body pour plaquer le footer en bas d'écran
-   même sur les pages courtes (ex. apropos.html) */
 body {
     display: flex;
     flex-direction: column;
@@ -444,9 +438,8 @@ footer nav a:focus,
     color: #e6a83a;
     letter-spacing: 1.5px;
 }
-/* =========================================================
-   CARROUSEL D'IMAGES — PAGE D'ACCUEIL
-   ========================================================= */
+
+
 
 .carousel {
     position: relative;
@@ -497,7 +490,7 @@ footer nav a:focus,
     max-width: 100%;
 }
 
-/* Boutons fléchés gauche / droite */
+
 .carousel-btn {
     position: absolute;
     top: 45%;
@@ -527,7 +520,7 @@ footer nav a:focus,
     right: 12px;
 }
 
-/* Points indicateurs en bas du carrousel */
+
 .carousel-indicators {
     display: flex;
     justify-content: center;
@@ -552,7 +545,7 @@ footer nav a:focus,
     transform: scale(1.15);
 }
 
-/* Adaptation mobile pour le carrousel */
+
 @media screen and (max-width: 650px) {
     .carousel-slide img {
         height: 240px;
