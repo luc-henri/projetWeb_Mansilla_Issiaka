@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signaler un Variant - TVA</title>
+    <link rel="stylesheet" href="../css/style_lh.css">
+    <script src="../java script/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div>
+        <img src="../img/logoTva.jpg" alt="Logo TVA" width="100" height="100">
+        <h1>INTRANET - TRIBUNAL DES VARIATIONS ANACHRONIQUES</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="principale.html">Services</a></li>
+            <li><a href="apropos.html">Contact</a></li>
+            <li><a href="signaler_variant.html" class="active">Signaler un Variant</a></li>
+        </ul>
+    </nav>
+    <h2>Pour l'Éternité. À Jamais.</h2>
+</header>
+
+<main>
+    <section class="form-hero">
+        <h2>RAPPORT D'ANOMALIE SPATIO-TEMPORELLE</h2>
+        <p>Remplissez le formulaire ci-dessous pour transmettre une alerte Nexus à la brigade des Minuteurs.</p>
+    </section>
+
+    <form id="signalement-form">
+        <fieldset>
+            <legend>Identité de l'Agent Rapporteur</legend>
+
+            <div class="form-group">
+                <label for="agent-id">Matricule de l'agent :</label>
+                <input type="text" id="agent-id" name="agent-id" placeholder="ex: Agent M-18" required>
+            </div>
+
+            <div class="form-group">
+                <label for="agent-unite">Unité d'intervention :</label>
+                <select id="agent-unite" name="agent-unite" required>
+                    <option value="Brigade des Minuteurs">Brigade des Minuteurs</option>
+                    <option value="Division des Analyses Temporelles">Division des Analyses Temporelles</option>
+                    <option value="Bureau des Juges">Bureau des Juges</option>
+                    <option value="Archives Chronologiques">Archives Chronologiques</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Détails de la Variation Temporelle</legend>
+
+            <div class="form-group">
+                <label for="variant-id">Identifiant ou nom du Variant :</label>
+                <input type="text" id="variant-id" name="variant-id" placeholder="ex: Loki-L1130, Sylvie-L0852" required>
+            </div>
+
+            <div class="form-group">
+                <label for="epoque">Époque / Année de la déviation :</label>
+                <input type="text" id="epoque" name="epoque" placeholder="ex: Pompéi, 79 ap. J.-C." required>
+            </div>
+
+            <div class="form-group">
+                <label for="localisation">Coordonnées de la réalité (Secteur/Lieu) :</label>
+                <input type="text" id="localisation" name="localisation" placeholder="ex: Terre-616, New York" required>
+            </div>
+
+            <div class="form-group">
+                <label>Niveau de Menace Nexus :</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="menace" value="faible" checked> Faible (Variation mineure)</label>
+                    <label><input type="radio" name="menace" value="modere"> Modéré (Ramification active)</label>
+                    <label><input type="radio" name="menace" value="critique"> Critique (Bifurcation rouge)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description complète de l'Événement Nexus :</label>
+                <textarea id="description" name="description" rows="6" placeholder="Décrivez l'action non autorisée commise par le Variant..." required></textarea>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">TRANSMETTRE LE RAPPORT</button>
+            <button type="reset" class="btn-reset">RÉINITIALISER</button>
+        </div>
+
+        <div id="confirmation-message" class="hidden-message"></div>
+    </form>
+</main>
+
+<footer class="tva-footer">
+    <p>&copy; 2024 Tribunal des Variations Anachroniques. Tous droits réservés.
+    </p>
+    <nav class="footer-nav">
+        <a href="accueil.html">Accueil</a>
+        <a href="principale.html">Le Flux Temporel</a>
+        <a href="signaler_variant.html">Signaler un Variant</a>
+        <a href="apropos.html">À propos de l'équipe</a>
+        <a href="https://github.com/luc-henri/projetWeb_Mansilla_Issiaka" target="_blank">GitHub</a>
+    </nav>
+    <span class="footer-motto">Pour l'Éternité. À Jamais.</span>
+</footer>
+
+</body>
+</html>
