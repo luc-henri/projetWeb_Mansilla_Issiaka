@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Empêche le rechargement par défaut de la page
             event.preventDefault();
 
-            // Adresse e-mail qui recevra le rapport (à remplacer par la vôtre)
+            // Adresse e-mail qui recevra le rapport 
             const emailDestinataire = "rapporttva@gmail.com";
 
             // Récupération des champs obligatoires
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     `(Menace : ${niveauMenace}). Ouverture de votre messagerie vers <strong>${emailDestinataire}</strong>...`;
             }
 
-            // Ouverture du client mail pré-rempli
+            
             window.location.href = lienMailto;
         });
 
